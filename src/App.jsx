@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const initialPosts = [
   {
@@ -296,7 +297,9 @@ function App() {
             ))}
           </div>
         </section>
-      </main>
+       </main>
+
+      <Analytics />
     </div>
   );
 }
