@@ -166,6 +166,9 @@ function App() {
   };
 
   const handleWriteClick = () => {
+    console.log("Write button clicked");
+    console.log("gtag type:", typeof window.gtag);
+   
     window.gtag?.("event", "write_post_clicked", {
       event_category: "button",
       event_label: "Write a Post",
