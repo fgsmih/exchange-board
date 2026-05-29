@@ -169,11 +169,15 @@ function App() {
     console.log("Write button clicked");
     console.log("gtag type:", typeof window.gtag);
    
-    window.gtag?.("event", "write_post_clicked", {
-      event_category: "button",
-      event_label: "Write a Post",
-    });
-
+    
+    if (window.gtag) {
+      window.gtag("event", "write_post_clicked", {
+        send_to: "G-GGCEFCYMEL",
+        event_category: "button",
+        event_label: "Write a Post",
+      });
+    }
+    
     alert(
       "This is a user-testing prototype. The real posting feature will be added later."
     );
